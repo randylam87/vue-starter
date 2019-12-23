@@ -1,17 +1,17 @@
 <template>
   <div>
-    <ProductLines msg="Welcome to Your Vue.js App"/>
+    <ProductLine />
   </div>
 </template>
 
 <script lang='ts'>
 import Vue from 'vue';
-import ProductLines from '@/components/ProductLines.vue';
+import ProductLine from '@/components/ProductLine.vue';
 
 export default Vue.extend({
   name: 'home',
   components: {
-    ProductLines,
+    ProductLine,
   },
 });
 
