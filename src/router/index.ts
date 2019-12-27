@@ -5,6 +5,7 @@ import Home from '@/views/Home.vue';
 import About from '@/views/About.vue';
 import ProductLine from '@/views/ProductLine.vue';
 import ConfigureProduct from '@/views/ConfigureProduct.vue';
+import Test from '@/views/Test.vue';
 import NotFound from '@/views/404.vue';
 
 Vue.use(VueRouter);
@@ -35,6 +36,11 @@ const routes = [
     path: '/configure-product',
     name: 'configureProduct',
     component: ConfigureProduct,
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: Test,
   },
   {
     path: '*',
