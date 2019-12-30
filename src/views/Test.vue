@@ -1,16 +1,18 @@
 <template>
   <div>
     <h1>Test</h1>
-    <div v-for='productLine in productLines' :key='productLine'>
-      {{ productLine}}
+    <div class='test'>
+      <div v-for='productLine in productLines' :key='productLine'>
+        {{ productLine}}
+      </div>
+
+      <hr />
+
+      <pre>
+      {{ JSON.stringify(data, null, 2) }}
+      </pre>
     </div>
-
-    <hr />
-
-    <pre>
-    {{ JSON.stringify(data, null, 2) }}
-    </pre>
-  </div>
+    </div>
 </template>
 
 <script lang='ts'>
@@ -20,7 +22,7 @@ import search from '@/api/middletier/search';
 export default Vue.extend({
   data() {
     return {
-      data: {},
+      data: {} as any,
       productLines: [],
     };
   },
@@ -34,3 +36,15 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped>
+h1 {
+  text-align: center;
+}
+
+.test {
+  margin: 1em;
+  padding: 2em;
+  border: 1px solid red;
+}
+</style>
